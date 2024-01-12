@@ -1,6 +1,6 @@
 import './App.css'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { MainLayout } from './layouts'
+import { PublicLayout } from './layouts'
 import { HomeContainer } from './containers'
 import LoginContainer from './containers/LoginContainer'
 import RegisterContainer from './containers/RegisterContainer'
@@ -11,7 +11,7 @@ function App() {
   const isLoggedIn = !!token
 
   const routes = createBrowserRouter([{
-    element: <MainLayout/>,
+    element: <PublicLayout/>,
     children: [{
       path: '/',
       element: <LoginContainer/>
@@ -30,7 +30,7 @@ function App() {
     },
     {
       path: '*',
-      element: <h1>Page Not Found</h1>
+      element: <h1>This Page is Not Found</h1>
     }
   ]
   }])

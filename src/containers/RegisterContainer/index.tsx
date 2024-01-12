@@ -38,7 +38,8 @@ const RegisterContainer = () => {
         navigate('/login');
       } else {
         const data = await response.json();
-        setError(data.message || 'Registration failed');
+        setError(data.errors || 'Registration failed');
+
       }
     } catch (error) {
       console.error('Registration error:', error);

@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import { Navbar } from "../../components"
 
 
-const MainLayout = () => {
+const PublicLayout = () => {
 
     return (
         <div>
@@ -14,4 +14,4 @@ const MainLayout = () => {
     )
 }
 
-export default MainLayout
+export default PublicLayout

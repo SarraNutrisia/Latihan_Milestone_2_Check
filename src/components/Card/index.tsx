@@ -1,25 +1,36 @@
-import { ReactNode, useMemo } from "react";
-import styles from './Card.module.css';
-
-interface Props {
-    children: ReactNode;
-    padding?: number;
-    
-}
-const Card = ({ children, padding } : Props) => {
-
-    const paddingStyle = useMemo(
-        () => ({
-            padding: `${padding}px`
-
-        }),
-        [padding]
-
-        )
+const Card: React.FC = () => {
 
     return (
-        <div className={styles.container} style={paddingStyle}>
-            {children}
+        <div className="bg-red-200">
+            <div className="flex flex-col justify-center items-center bg-blue-300">
+            <div>3 hours forecast data</div>
+            <div className="flex justify-center items-center space-x-10">
+            <div>waktu</div>
+                <div className="flex flex-col justify-center items-center">
+                    <div><img src="" alt="" />icon awan</div>
+                    <div>suhu</div>
+                </div>
+            <div>deskripsi</div>
+            </div>
+            </div>
+
+            <div className="flex justify-center items-center space-x-10">
+            <div>waktu</div>
+                <div className="flex flex-col justify-center items-center">
+                    <div><img src="" alt="" />icon awan</div>
+                    <div>suhu</div>
+                </div>
+            <div>deskripsi</div>
+            </div>
+
+            <div className="flex justify-center items-center space-x-10">
+            <div>waktu</div>
+                <div className="flex flex-col justify-center items-center">
+                    <div><img src="" alt="" />icon awan</div>
+                    <div>suhu</div>
+                </div>
+            <div>deskripsi</div>
+            </div>
         </div>
     )
 }
